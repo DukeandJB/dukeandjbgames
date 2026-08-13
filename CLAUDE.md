@@ -211,14 +211,31 @@ an option. Offer it.
 
 ## Current game
 
-Name:
+Name: Portal Obby (work in progress — NOT on the homepage yet)
 
-What it is:
+What it is: A side-view jumping obstacle course. Reach the portal at the
+end for +1 trophy, then you're sent back to spawn. Spend trophies at the
+shop (press Z by the shopkeeper) on coils.
 
-What's built:
+What's built: Platformer with move/jump (arrows or A/D, up/W/space),
+the obby pasted twice (18 platforms, ONE portal at the very end),
+trophies saved in localStorage, and a shop with 4 upgrades — Speed Coil
+(2), Gravity Coil (3), Grappling Hook (4, press G to zip to a ledge),
+Flying Carpet (5, press F to fly with a 5-second fuel meter that refills
+on the ground). Touch controls on phone (‹ › ▲ and Z).
 
-What's next:
+Where it lives: the live working copy is in `start/` (edit there so the
+`/start/` preview auto-refreshes). A saved snapshot is in
+`games/portal-obby/`. To resume: if `start/` still has it, just keep
+editing; if `start/` got reset to the splash, copy `games/portal-obby/*`
+back into `start/` first.
+
+What's next: (Duke and JB to decide) — more decoration, extra coils, or
+tune the difficulty. When it's finished: copy `start/` to
+`games/portal-obby/`, add a homepage card, and push.
 
 ## Session log
 
 Two lines at the end of every session: what we built, what broke.
+- Built Portal Obby (obby + portal + trophy shop with 4 coils); saved as
+  work-in-progress. Nothing broke. Paused for a tea break, resuming later.
