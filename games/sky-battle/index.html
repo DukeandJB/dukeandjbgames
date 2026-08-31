@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Sky Battle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <canvas id="c"></canvas>
+
+    <div id="hud">
+      <div id="score">0</div>
+      <div id="wave">Wave 1</div>
+      <div id="health"><span id="healthbar"></span></div>
+    </div>
+
+    <div id="controls">
+      <button id="left" class="ctrl">&lsaquo;</button>
+      <button id="right" class="ctrl">&rsaquo;</button>
+    </div>
+
+    <div id="over" class="hidden">
+      <h1 id="overtitle">Down!</h1>
+      <p id="overscore">Score: 0</p>
+      <button id="again">Play again</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

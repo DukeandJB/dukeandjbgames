@@ -1,0 +1,147 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: #0E5FD8;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+  touch-action: none;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- HUD ---- */
+#hud {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+}
+
+#score {
+  font-weight: 800;
+  font-size: 32px;
+  color: #FBF3E4;
+  text-shadow: 3px 3px 0 #16130F;
+  min-width: 60px;
+}
+
+#wave {
+  font-weight: 800;
+  font-size: 20px;
+  color: #FBF3E4;
+  text-shadow: 2px 2px 0 #16130F;
+  white-space: nowrap;
+}
+
+#health {
+  flex: 1;
+  max-width: 220px;
+  height: 20px;
+  background: #16130F;
+  border: 3px solid #16130F;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#healthbar {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #FF4A1C;
+  transition: width 120ms ease-out;
+}
+
+/* ---- Touch controls ---- */
+#controls {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ctrl {
+  width: 90px;
+  height: 90px;
+  font-size: 52px;
+  line-height: 1;
+  color: #16130F;
+  background: #FBF3E4;
+  border: 4px solid #16130F;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 0 #16130F;
+  font-weight: 800;
+  touch-action: none;
+}
+
+.ctrl:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 0 #16130F;
+  background: #FF4A1C;
+}
+
+/* ---- Game over ---- */
+#over {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: rgba(22, 19, 15, 0.72);
+}
+
+#over.hidden { display: none; }
+
+#overtitle {
+  font-size: 56px;
+  font-weight: 800;
+  color: #FBF3E4;
+  text-shadow: 4px 4px 0 #FF4A1C;
+}
+
+#overscore {
+  font-size: 24px;
+  color: #FBF3E4;
+}
+
+#again {
+  margin-top: 12px;
+  padding: 16px 32px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #16130F;
+  background: #FF4A1C;
+  border: 4px solid #16130F;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 0 #16130F;
+}
+
+#again:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 0 #16130F;
+}
+
+/* Hide touch buttons when a real mouse is present */
+@media (hover: hover) and (pointer: fine) {
+  #controls { display: none; }
+}

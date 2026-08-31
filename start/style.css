@@ -1,15 +1,54 @@
+:root {
+  --paper: #FBF3E4;
+  --ink:   #16130F;
+  --flame: #FF4A1C;
+  --sea:   #0E5FD8;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas,
+               "Liberation Mono", monospace;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body {
-  width: 100%;
   height: 100%;
-  overflow: hidden;
-  background: #16130F;
+  background: var(--paper);
+  font-family: var(--font-sans);
 }
 
-#game {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  touch-action: none;
+.splash {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+}
+
+.wordmark {
+  font-weight: 800;
+  font-size: clamp(40px, 12vw, 96px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  text-align: center;
+}
+
+.wordmark .dot { color: var(--flame); }
+
+.tag {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: clamp(14px, 4vw, 20px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  background: var(--flame);
+  padding: 6px 12px;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 0 var(--ink);
+  transform: rotate(-1.5deg);
 }

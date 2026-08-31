@@ -239,3 +239,6 @@ tune the difficulty. When it's finished: copy `start/` to
 Two lines at the end of every session: what we built, what broke.
 - Built Portal Obby (obby + portal + trophy shop with 4 coils); saved as
   work-in-progress. Nothing broke. Paused for a tea break, resuming later.
+- Finished Sky Battle (top-down plane fighter: fly, steer, auto-shoot, red
+  enemies). Saved to games/sky-battle/, added homepage card, pushed live.
+  Nothing broke.
